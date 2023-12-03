@@ -119,10 +119,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void Flip()
+    private void Flip() // solucionado
     {
         _facingRight = !_facingRight;
-        float localScaleX = transform.position.x;
+        float localScaleX = transform.localScale.x; // error estaba transform.position.x fue cambiado al actual 
         localScaleX = localScaleX * -1f;
         transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
