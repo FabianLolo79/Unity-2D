@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -59,13 +60,16 @@ public class Weapon : MonoBehaviour
         {
             RaycastHit2D hitInfo = Physics2D.Raycast(_firePoint.position, _firePoint.right);
 
-            if (hitInfo)
+            if (hitInfo) // NO FUNCIONA POR NINGÚN LADO JEJE
             {
+                Debug.Log("Colisión con: " + hitInfo.collider.name);
+                // Realiza acciones adicionales si se detecta una colisión.
+
                 // Example code
                 // if(hitInfo.collider.tag == "Player")
                 //{
                 //    Transform player = hitInfo.transform;
-                //    player.GetComponent<PlayerHealth>().ApllyDamahe(5);
+                //    player.GetComponent<PlayerHealth>().ApllyDamage(5);
                 //}
 
                 // Instantiate explosion on hit point
@@ -84,7 +88,7 @@ public class Weapon : MonoBehaviour
 
             lineRenderer.enabled = true;
 
-            yield return null;
+            yield return 0; // acá probando 0 en vez de null
 
             lineRenderer.enabled = false;
         }

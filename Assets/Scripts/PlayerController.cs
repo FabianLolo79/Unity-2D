@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float longIdleTime = 5f;
+    public float longIdleTime; //= 5f; // revisar, está colocado en el motor unity el valor tmb
     public float speed = 2.5f;
     public float jumpForce = 2.5f;
 
@@ -103,19 +103,25 @@ public class PlayerController : MonoBehaviour
             _isAttacking = false;
         }
 
-        // Long Idle
+        Debug.Log("antes de entrar al long idle");
+        // Long Idle - REVISAR,NO ANDA
         if (_animator.GetCurrentAnimatorStateInfo(0).IsTag("Idle"))
         {
+            Debug.Log("aantes de entrar el long idle con tiempo");
             _longIdleTimer += Time.deltaTime;
+            Debug.Log(_longIdleTimer + "antes de ENTRAR al IF");
 
             if (_longIdleTimer >= longIdleTime)
             {
+                Debug.Log("ENTRÓ!!!???");
                 _animator.SetTrigger("LongIdle");
             }
-            else
+            else // entra siempre al ELSE y reinicia el contador de tiempo, jamás llega a 5seg
             {
+                Debug.Log("Si No - contador timer a CERO");
                 _longIdleTimer = 0f;
             }
+            Debug.Log(_longIdleTimer + "fuera del IF");
         }
     }
 

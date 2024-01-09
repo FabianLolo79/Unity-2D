@@ -41,8 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 718033784187761333}
   - component: {fileID: 7876934044613953009}
-  - component: {fileID: 8256194392159275820}
-  - component: {fileID: 2166952177756810987}
   - component: {fileID: 2102630619222744055}
   m_Layer: 0
   m_Name: Enemy
@@ -120,37 +118,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8256194392159275820
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5377439233731876289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 399c36f225651124faecebcc5bf545d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab: {fileID: 4743111893352917051, guid: 27a37ab5ee9861d48afa6d502ba20dd8, type: 3}
-  point: {fileID: 925621094906382407}
-  livingTime: 1
---- !u!114 &2166952177756810987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5377439233731876289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b520565475158534eb0fb6d28fff3e9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  minX: -2.553
-  maxX: 2.536
-  waitingTime: 2
 --- !u!95 &2102630619222744055
 Animator:
   serializedVersion: 5

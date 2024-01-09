@@ -11,7 +11,7 @@ public class TestingRaycast2D : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        _weapon = GetComponent<Weapon>();
+        _weapon = GetComponent<Weapon>(); //acá va GetComponentInChildren<Weapon>(); ???
     }
 
     // Start is called before the first frame update
